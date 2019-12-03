@@ -1,0 +1,1068 @@
+# Copyright (C) 2016 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: zurbox 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2018-07-28 23:34+0800\n"
+"PO-Revision-Date: 2018-07-28 23:34+0800\n"
+"Last-Translator: dinevthemes <post@makewp.ru>\n"
+"Language-Team: dinevthemes <post@dinevthemes.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:53 comments.php:74
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:56 comments.php:77
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:57 comments.php:78
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:91
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:84
+msgid "Main Right"
+msgstr ""
+
+#: functions.php:85
+msgid "Main Left"
+msgstr ""
+
+#: functions.php:86
+msgid "Mobile"
+msgstr ""
+
+#: functions.php:115
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:124
+msgid "Top Extra Area"
+msgstr ""
+
+#: functions.php:133
+msgid "Footer Area"
+msgstr ""
+
+#: functions.php:143
+msgid "Frontpage Area Wide"
+msgstr ""
+
+#: functions.php:145
+msgid "Widgets section in the full width of the screen."
+msgstr ""
+
+#: functions.php:152
+msgid "Frontpage Area Columns"
+msgstr ""
+
+#: functions.php:154
+msgid ""
+"Widgets section with columns. The number of columns is set in the Customizer."
+msgstr ""
+
+#: functions.php:161
+msgid "Frontpage Area Box"
+msgstr ""
+
+#: functions.php:163
+msgid "Widgets section of limited width (main layout width)."
+msgstr ""
+
+#: header.php:28
+msgid "Skip to content"
+msgstr ""
+
+#: customizer/config.php:23
+msgid "Site Background"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:11
+msgid "default"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:12
+msgid "gray"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:13
+msgid "green"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:14
+msgid "red"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:15
+msgid "orange"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:16
+msgid "hollow"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:17
+msgid "gray hollow"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:18
+msgid "green hollow"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:19
+msgid "red hollow"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:20
+msgid "orange hollow"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:32
+#: customizer/controls/dropdown-list.php:46
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:58
+msgid "Video"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:59
+msgid "Audio"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:60
+msgid "Image"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:70
+msgid "Post Boxed"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:71
+msgid "Metro Box"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:108
+msgid "Ultra Light"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:109
+msgid "Light"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:110
+msgid "Book"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:111
+msgid "Regular"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:112
+msgid "Medium"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:113
+msgid "Semi-Bold"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:114
+msgid "Bold"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:115
+msgid "Extra Bold"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:116
+msgid "Ultra Bold"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:126
+msgid "10px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:127
+msgid "12px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:128
+msgid "14px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:129
+msgid "16px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:130
+msgid "18px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:131
+msgid "20px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:132
+msgid "22px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:133
+msgid "24px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:134
+msgid "28px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:135
+msgid "30px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:136
+msgid "32px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:137
+msgid "34px"
+msgstr ""
+
+#: customizer/controls/dropdown-list.php:138
+msgid "36px"
+msgstr ""
+
+#: customizer/controls/helper/ckecksorter.php:13
+msgid "Widgets Area Wide"
+msgstr ""
+
+#: customizer/controls/helper/ckecksorter.php:19
+#: customizer/settings/front-page-sections.php:126
+msgid "Widgets Area Columns"
+msgstr ""
+
+#: customizer/controls/helper/ckecksorter.php:25
+msgid "Widgets Area Box"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:12
+msgid "Posts Options"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:13
+msgid "Here the view of posts options on an home/blog page and single."
+msgstr ""
+
+#: customizer/settings/blog-posts.php:23
+msgid "Blog Posts"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:32
+msgid "Blog Intro Title"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:33
+msgid "My Journal"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:40 customizer/settings/blog-posts.php:70
+msgid "Hide Author"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:41 customizer/settings/blog-posts.php:69
+msgid "Hide Date"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:42
+msgid "Hide Post Excerpt"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:43
+msgid "Hide Comments Link"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:44
+msgid "Hide Read More"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:62
+msgid "Single Post"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:68 customizer/settings/page.php:38
+msgid "Hide Breadcrumbs"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:71
+msgid "Hide Tags Meta"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:72
+msgid "Hide Category Meta"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:73
+msgid "Hide Author Box"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:87 customizer/settings/page.php:22
+msgid "Not Display"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:88 customizer/settings/page.php:23
+msgid "Overlay Style"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:89 customizer/settings/page.php:24
+msgid "Header Style"
+msgstr ""
+
+#: customizer/settings/blog-posts.php:96 customizer/settings/page.php:31
+msgid "Featured Image"
+msgstr ""
+
+#: customizer/settings/colors.php:12
+msgid "Color Settings"
+msgstr ""
+
+#: customizer/settings/colors.php:22
+msgid "Body Colors"
+msgstr ""
+
+#: customizer/settings/colors.php:28
+msgid "Main Text Color"
+msgstr ""
+
+#: customizer/settings/colors.php:47
+msgid "Accent / Link Color"
+msgstr ""
+
+#: customizer/settings/colors.php:89
+msgid "Hover Link Color"
+msgstr ""
+
+#: customizer/settings/colors.php:116
+msgid "Navigation Colors"
+msgstr ""
+
+#: customizer/settings/colors.php:126
+msgid "Main Menu Bar Background"
+msgstr ""
+
+#: customizer/settings/colors.php:146
+msgid "Main Menu Item"
+msgstr ""
+
+#: customizer/settings/colors.php:177
+msgid "Main Sub-Menu Background"
+msgstr ""
+
+#: customizer/settings/colors.php:205
+msgid "Main Sub-Menu Item"
+msgstr ""
+
+#: customizer/settings/colors.php:216
+msgid "Mobile Menu Background"
+msgstr ""
+
+#: customizer/settings/colors.php:232
+msgid "Mobile Menu Item"
+msgstr ""
+
+#: customizer/settings/colors.php:252
+msgid "Black"
+msgstr ""
+
+#: customizer/settings/colors.php:253
+msgid "White"
+msgstr ""
+
+#: customizer/settings/colors.php:260
+msgid "Mobile Menu Icon Style"
+msgstr ""
+
+#: customizer/settings/colors.php:272
+msgid "Content Elements"
+msgstr ""
+
+#: customizer/settings/colors.php:279
+msgid "Post/Page Title"
+msgstr ""
+
+#: customizer/settings/colors.php:290
+msgid "Post Meta Info"
+msgstr ""
+
+#: customizer/settings/colors.php:300
+msgid "Post Meta Link"
+msgstr ""
+
+#: customizer/settings/colors.php:311
+msgid "Sidebar Widget Title"
+msgstr ""
+
+#: customizer/settings/colors.php:325
+msgid "Comment Block"
+msgstr ""
+
+#: customizer/settings/colors.php:332
+msgid "Headings"
+msgstr ""
+
+#: customizer/settings/colors.php:342
+msgid "Content"
+msgstr ""
+
+#: customizer/settings/colors.php:352
+msgid "Meta Info"
+msgstr ""
+
+#: customizer/settings/colors.php:366
+msgid "Author Block"
+msgstr ""
+
+#: customizer/settings/colors.php:373 customizer/settings/colors.php:457
+msgid "Background"
+msgstr ""
+
+#: customizer/settings/colors.php:383
+msgid "Heading"
+msgstr ""
+
+#: customizer/settings/colors.php:393 inc/widgets/widget-page-featured.php:116
+msgid "Description"
+msgstr ""
+
+#: customizer/settings/colors.php:407
+msgid "Primary Button"
+msgstr ""
+
+#: customizer/settings/colors.php:414
+msgid "Button Background"
+msgstr ""
+
+#: customizer/settings/colors.php:425
+msgid "Button Text"
+msgstr ""
+
+#: customizer/settings/colors.php:440
+msgid "Footer Colors"
+msgstr ""
+
+#: customizer/settings/colors.php:446
+msgid "Text"
+msgstr ""
+
+#: customizer/settings/colors.php:468
+msgid "Bottom Text"
+msgstr ""
+
+#: customizer/settings/colors.php:479
+msgid "Bottom Background"
+msgstr ""
+
+#: customizer/settings/footer.php:12
+msgid "Footer Settings"
+msgstr ""
+
+#: customizer/settings/footer.php:22 inc/widgets/widget-child-pages.php:50
+#: inc/widgets/widget-recent-posts.php:77
+msgid "Two"
+msgstr ""
+
+#: customizer/settings/footer.php:23 inc/widgets/widget-child-pages.php:51
+#: inc/widgets/widget-recent-posts.php:78
+msgid "Three"
+msgstr ""
+
+#: customizer/settings/footer.php:24 inc/widgets/widget-child-pages.php:52
+#: inc/widgets/widget-recent-posts.php:79
+msgid "Four"
+msgstr ""
+
+#: customizer/settings/footer.php:25
+msgid "Five"
+msgstr ""
+
+#: customizer/settings/footer.php:32
+msgid "Column Number"
+msgstr ""
+
+#: customizer/settings/footer.php:41
+msgid "Copyright Text"
+msgstr ""
+
+#: customizer/settings/footer.php:42
+msgid "All Rights Reserved"
+msgstr ""
+
+#: customizer/settings/footer.php:49
+msgid "Disable Theme Credits"
+msgstr ""
+
+#: customizer/settings/footer.php:50
+msgid "Disable Copyright Date"
+msgstr ""
+
+#: customizer/settings/front-page-order.php:12
+msgid "Front Page Order"
+msgstr ""
+
+#: customizer/settings/front-page-order.php:13
+#: customizer/settings/front-page-sections.php:13
+msgid ""
+"The front display must be assigned a static page with a default template."
+msgstr ""
+
+#: customizer/settings/front-page-order.php:29
+msgid "Sections Order"
+msgstr ""
+
+#: customizer/settings/front-page-order.php:30
+msgid "Check to show. Drag and drop to sort."
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:12
+msgid "Front Page Sections"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:23
+msgid "Page Content"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:29
+msgid "Hide Content Box"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:36
+msgid "Check it if you want to hide the box with the page title and content."
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:43
+msgid "Full Width"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:44
+msgid "Framed Box"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:51
+msgid "Content Layout"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:59
+msgid "Background Color"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:75
+msgid "Text Color"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:91
+msgid "Title Color"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:107
+msgid "Box Frame Color"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:127
+msgid "To place widgets go to Menu Appearance > Widgets: Widgets Area Columns."
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:133
+msgid "Two Columns"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:134
+msgid "Three Columns"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:135
+msgid "Four Columns"
+msgstr ""
+
+#: customizer/settings/front-page-sections.php:140
+msgid "Columns Number"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:12
+msgid "Google Fonts"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:22
+msgid "General Font"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:30
+#: customizer/settings/google-fonts.php:82
+#: customizer/settings/google-fonts.php:134
+#: customizer/settings/google-fonts.php:186
+#: customizer/settings/google-fonts.php:238
+#: customizer/settings/google-fonts.php:290
+#: customizer/settings/google-fonts.php:342
+msgid "Google Font Name"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:31
+#: customizer/settings/google-fonts.php:83
+#: customizer/settings/google-fonts.php:135
+#: customizer/settings/google-fonts.php:187
+#: customizer/settings/google-fonts.php:239
+#: customizer/settings/google-fonts.php:291
+#: customizer/settings/google-fonts.php:343
+msgid "Choose a font name. Default: Open Sans"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:43
+#: customizer/settings/google-fonts.php:95
+#: customizer/settings/google-fonts.php:147
+#: customizer/settings/google-fonts.php:199
+#: customizer/settings/google-fonts.php:251
+#: customizer/settings/google-fonts.php:303
+#: customizer/settings/google-fonts.php:355
+msgid "Font Weight"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:44
+#: customizer/settings/google-fonts.php:148
+#: customizer/settings/google-fonts.php:200
+#: customizer/settings/google-fonts.php:252
+msgid ""
+"Set font-weight. Default: 400/Regular. Important: Not all fonts support "
+"every font-weight."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:57
+#: customizer/settings/google-fonts.php:109
+#: customizer/settings/google-fonts.php:161
+#: customizer/settings/google-fonts.php:213
+#: customizer/settings/google-fonts.php:265
+#: customizer/settings/google-fonts.php:317
+#: customizer/settings/google-fonts.php:369
+msgid "Font Size"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:58
+msgid "Set font-size. Default: 16px"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:73
+msgid "Page/Post Heading"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:74
+msgid "Used for titles of single posts and pages."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:96
+msgid ""
+"Set font-weight. Default: 700/Bolder. Important: Not all fonts support every "
+"font-weight."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:110
+#: customizer/settings/google-fonts.php:214
+msgid "Set font-size. Default: 28px"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:125
+msgid "Blog/Archive Headings"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:126
+msgid "Used for blog/archive page header."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:162
+#: customizer/settings/google-fonts.php:266
+msgid "Set font-size. Default: 24px"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:177
+msgid "Section Heading / H2"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:178
+msgid "Used for section heading."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:229
+msgid "Entry Headings"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:230
+msgid "Used for entry title with grid layout / H3."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:281
+msgid "Comments Heading"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:282
+msgid "Used for comments section headers."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:304
+#: customizer/settings/google-fonts.php:356
+msgid ""
+"Set font-weight. Default: 600/Bold. Important: Not all fonts support every "
+"font-weight."
+msgstr ""
+
+#: customizer/settings/google-fonts.php:318
+#: customizer/settings/google-fonts.php:370
+msgid "Set font-size. Default: 19px"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:333
+msgid "Widgets Heading"
+msgstr ""
+
+#: customizer/settings/google-fonts.php:334
+msgid "Used for widget title."
+msgstr ""
+
+#: customizer/settings/layout.php:12
+msgid "Layouts"
+msgstr ""
+
+#: customizer/settings/layout.php:24
+msgid "Home/Blog Posts"
+msgstr ""
+
+#: customizer/settings/layout.php:26 customizer/settings/layout.php:42
+msgid "One Column / Sidebar"
+msgstr ""
+
+#: customizer/settings/layout.php:27 customizer/settings/layout.php:43
+msgid "Wide Grid 3 Columns"
+msgstr ""
+
+#: customizer/settings/layout.php:28 customizer/settings/layout.php:44
+msgid "Wide Masonry 3 Columns"
+msgstr ""
+
+#: customizer/settings/layout.php:40
+msgid "Archive/Category Posts"
+msgstr ""
+
+#: customizer/settings/layout.php:56
+msgid "Sidebar Layout"
+msgstr ""
+
+#: customizer/settings/layout.php:57
+msgid ""
+"For each page you can choose a special alignment of the sidebar on the edit "
+"screen of the page."
+msgstr ""
+
+#: customizer/settings/layout.php:59
+msgid "Right Alignment"
+msgstr ""
+
+#: customizer/settings/layout.php:60
+msgid "Left Alignment"
+msgstr ""
+
+#: customizer/settings/menu-bar.php:12
+msgid "Main Menu Bar"
+msgstr ""
+
+#: customizer/settings/menu-bar.php:21
+msgid "Hide Right Search Item"
+msgstr ""
+
+#: customizer/settings/menu-bar.php:40
+msgid "Mobile Layout"
+msgstr ""
+
+#: customizer/settings/menu-bar.php:42
+msgid "Top-bar"
+msgstr ""
+
+#: customizer/settings/menu-bar.php:43
+msgid "Off-canvas"
+msgstr ""
+
+#: customizer/settings/page.php:12
+msgid "Page Settings"
+msgstr ""
+
+#: customizer/settings/site-identity.php:12
+msgid "Hide Site Title"
+msgstr ""
+
+#: customizer/settings/site-identity.php:27
+msgid "Hide Tagline"
+msgstr ""
+
+#: customizer/settings/site-logo.php:18 customizer/settings/site-logo.php:30
+msgid "Site Logo"
+msgstr ""
+
+#: customizer/settings/site-logo.php:31
+msgid "Upload your custom logo. It will automatically replace the site title."
+msgstr ""
+
+#: inc/template-tags.php:431 inc/template-tags.php:437
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:433
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:439
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:445 inc/template-tags.php:511
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:445 inc/template-tags.php:511
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:445 inc/template-tags.php:511
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:452 template-parts/front-page/content-box.php:33
+#: template-parts/front-page/content-full.php:30
+#: template-parts/page/content.php:49
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/template-tags.php:532
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:533
+msgid "Next"
+msgstr ""
+
+#: inc/template-tags.php:536
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:548
+#, php-format
+msgid "Powered by %s"
+msgstr ""
+
+#: inc/template-tags.php:550
+#, php-format
+msgid "Theme by %s"
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:12
+msgid "Child Pages"
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:15
+msgid "Displaying child pages in 1, 2, 3, 4 columns."
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:30
+msgid "The widget for displaying child pages in columns."
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:33
+#: inc/widgets/widget-recent-posts.php:43
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:39
+#: inc/widgets/widget-recent-posts.php:48
+msgid "Intro Text:"
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:45
+#: inc/widgets/widget-recent-posts.php:71
+msgid "Number of columns:"
+msgstr ""
+
+#: inc/widgets/widget-child-pages.php:49
+#: inc/widgets/widget-recent-posts.php:76
+msgid "One"
+msgstr ""
+
+#: inc/widgets/widget-page-featured.php:22
+#: inc/widgets/widget-page-featured.php:32
+#: inc/widgets/widget-page-featured.php:98
+msgid "Featured Page"
+msgstr ""
+
+#: inc/widgets/widget-page-featured.php:25
+msgid "Display a featured page"
+msgstr ""
+
+#: inc/widgets/widget-page-featured.php:108
+msgid ""
+"Show a featured page: shows the title and excerpt of the page over the "
+"background featured image."
+msgstr ""
+
+#: inc/widgets/widget-page-featured.php:111
+msgid "Title"
+msgstr ""
+
+#: inc/widgets/widget-page-featured.php:121
+msgid "Page:"
+msgstr ""
+
+#: inc/widgets/widget-page-featured.php:135
+msgid "Color Text:"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:12
+msgid "Posts Columns"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:15
+msgid "Recent posts in 1, 2, 3, 4 columns, with the category selection."
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:21
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:22
+#: inc/widgets/widget-recent-posts.php:40
+msgid ""
+"The widget for displaying recent posts of the selected category in columns."
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:53
+msgid "Category:"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:57
+msgid "All categories"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:66
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:89
+msgid "Hidden post Excerpt."
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:92
+msgid "Hidden post Date."
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:95
+msgid ""
+"If you want to place the button of that section - enter the Buttons Text and "
+"Link."
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:98
+msgid "Button Text:"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:103
+msgid "Button Link:"
+msgstr ""
+
+#: library/navigation.php:89
+msgid "Home"
+msgstr ""
+
+#: library/navigation.php:226
+msgid "Author:"
+msgstr ""
+
+#: library/navigation.php:231
+msgid "Page"
+msgstr ""
+
+#: library/navigation.php:236
+msgid "Search Reasults for: "
+msgstr ""
+
+#: library/navigation.php:241
+msgid "Error 404"
+msgstr ""
+
+#: template-parts/content-404.php:13
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: template-parts/content-404.php:17
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/top-widget.php:31
+msgid "Place the widgets in the Top Extra Area."
+msgstr ""
+
+#: template-parts/entry/content-box.php:59
+msgid "Read More"
+msgstr ""
+
+#: template-parts/page/content.php:38 template-parts/post/content.php:49
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/page-header/search.php:2
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/post/author.php:30
+#, php-format
+msgid "Published by %s"
+msgstr ""
+
+#: template-parts/post/author.php:40
+msgid "View all author posts"
+msgstr ""
+
+#: template-parts/post/content.php:44
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""

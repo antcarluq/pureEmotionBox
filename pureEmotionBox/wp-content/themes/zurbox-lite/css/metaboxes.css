@@ -1,0 +1,28 @@
+.custom-meta-row-title {
+    display: block;
+    float: left;
+    width: 25%;
+}
+ 
+.custom-meta-row-content {
+    float: left;
+    padding-bottom: 1em;
+}
+ 
+.custom-meta-row-content label {
+    display: block;
+    line-height: 1.75em;
+}
+
+#meta-title,
+#meta-code,
+#meta-text,
+#meta-url,
+#meta-subtitle,
+#meta-head {
+    width: 70%;
+}
+
+#meta-image {
+    width: 50%;
+}
