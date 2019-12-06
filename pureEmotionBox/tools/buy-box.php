@@ -1,17 +1,12 @@
 <?php 
 include "../wp-load.php";
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
- 
-// /* Exception class. */
-// require '../PHPMailer-master/src/Exception.php';
- 
-// /* The main PHPMailer class. */
-// require '../PHPMailer-master/src/PHPMailer.php';
- 
-// /* SMTP class, needed if you want to use SMTP. */
-// require '../PHPMailer-master/src/SMTP.php';
-
+use \Mailjet\Resources;
+require '../vendor/autoload.php';
+require '../Mailjet/Client.php';
+require '../Mailjet/Config.php';
+require '../Mailjet/Request.php';
+require '../Mailjet/Resources.php';
+require '../Mailjet/Response.php';
  
 require "enlace.php";
     $enlace = start_database();
@@ -74,140 +69,140 @@ if (!$enlace) {
         $i = $i + 1;
     }
 
-    // $email = new PHPMailer(TRUE);
-    // $email_user = "pureemotionbox@gmail.com";
-    // $email_password = "pureemotionboxPGPI21";
-    // $the_subject = "Confirmación de compra en Pure eMotion Box";
-    // $address_to = $_REQUEST['email'];
-    // $from_name = "Pure eMotion Box";
-    // $phpmailer = new PHPMailer();
-    // // ---------- datos de la cuenta de Gmail -------------------------------
-    // $phpmailer->Username = $email_user;
-    // $phpmailer->Password = $email_password;
-    // //-----------------------------------------------------------------------
-    // // $phpmailer->SMTPDebug = 1;
-    // $phpmailer->SMTPSecure = 'ssl';
-    // $phpmailer->Host = "smtp.gmail.com"; // GMail
-    // $phpmailer->Port = 465;
-    // $phpmailer->IsSMTP(); // use SMTP
-    // $phpmailer->SMTPAuth = true;
-    // $phpmailer->setFrom($phpmailer->Username,$from_name);
-    // $phpmailer->AddAddress($address_to); // recipients email
-    // $phpmailer->Subject = $the_subject;
-    // $phpmailer->Body .='
-    // <!DOCTYPE html>
-    // <html lang="en">
-    // <head>
-    // <meta charset="UTF-8">
-    // <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    // <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    // <title>Document</title>
-    // <style>
+    $body = ' <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
     
-    // body{
-    //     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-    // }
-    // h3{
-    //     font-size: 20px;
-    // }
+    body{
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    }
+    h3{
+        font-size: 20px;
+    }
     
-    // .container {
-    //     padding-bottom: 5px;
-    //     border: 1px solid #d1d5da;
-    //     border-radius: 3px 3px 0px 0px;
-    // }
-    // .div_header {
-    //     padding: 10px 25px;
-    //     border-bottom: 1px solid #d1d5da;
-    //     background: #f6f8fa;
-    // }
-    // ul{
-    //     list-style: none;
-    // }
+    .container {
+        padding-bottom: 5px;
+        border: 1px solid #d1d5da;
+        border-radius: 3px 3px 0px 0px;
+    }
+    .div_header {
+        padding: 10px 25px;
+        border-bottom: 1px solid #d1d5da;
+        background: #f6f8fa;
+    }
+    ul{
+        list-style: none;
+    }
     
-    // strong.title{
-    //     color:darkslategray;
-    // }
+    strong.title{
+        color:darkslategray;
+    }
     
-    // p.info{
-    //     color: #3E5F8A;
-    //     font-size: 18px;
-    // }
+    p.info{
+        color: #3E5F8A;
+        font-size: 18px;
+    }
     
-    // .producto{
-    //     margin: 50px;
-    // }
+    .producto{
+        margin: 50px;
+    }
     
-    // img{
-    //     width: 10%;
-    // }
+    img{
+        width: 10%;
+    }
     
-    // .producto > ul{
-    //     float: left;
-    //     margin-right: 100px;
-    // }
+    .producto > ul{
+        float: left;
+        margin-right: 100px;
+    }
     
-    // </style>
-    // </head>
-    // <body>
-    // <!-- Detalles de la compra -->
-    // <div class="container">
-    //     <div class="div_header">
-    //         <h3>Detalles de la compra</h3>
-    //     </div>
-    //         <ul>
-    //             <li>
-    //                 <p class="info"><strong class="title">Caja: </strong>'.$caja['tematica'].'</p>
-    //             </li>
-    //             <li>
-    //                 <p class="info"><strong class="title">Precio: </strong>'.$caja['precio'].'</p>
-    //             </li>
-    //             <li>
-    //                 <p class="info"><strong class="title">Dirección de envío: </strong>'.$_REQUEST['direccion_envio'].'</p>
-    //             </li>
-    //             <li>
-    //                 <p class="info"><strong class="title">Fecha: </strong>'.date("d-m-Y").'</p>
-    //             </li>
-    //             <li>
-    //                 <p class="info"><strong class="title">Identificador: </strong>'.$identificador.'</p>
-    //             </li>
-    //         </ul>
-    // </div>
-    // </br>
-    // </br>
-    // <!-- Productos -->
-    // <div class="container">
-    //     <div class="div_header">
-    //         <h3>Productos</h3>
-    //     </div>';
-    // $productos_comprados = $enlace->query('SELECT pr.* FROM producto_obtenido_productos p JOIN producto pr WHERE pr.id=p.productos and producto_obtenido=' . $id_producto_obtenido);
+    </style>
+    </head>
+    <body>
+    <!-- Detalles de la compra -->
+    <div class="container">
+        <div class="div_header">
+            <h3>Detalles de la compra</h3>
+        </div>
+            <ul>
+                <li>
+                    <p class="info"><strong class="title">Caja: </strong>'.$caja['tematica'].'</p>
+                </li>
+                <li>
+                    <p class="info"><strong class="title">Precio: </strong>'.$caja['precio'].'</p>
+                </li>
+                <li>
+                    <p class="info"><strong class="title">Dirección de envío: </strong>'.$_REQUEST['direccion_envio'].'</p>
+                </li>
+                <li>
+                    <p class="info"><strong class="title">Fecha: </strong>'.date("d-m-Y").'</p>
+                </li>
+                <li>
+                    <p class="info"><strong class="title">Identificador: </strong>'.$identificador.'</p>
+                </li>
+            </ul>
+    </div>
+    </br>
+    </br>
+    <!-- Productos -->
+    <div class="container">
+        <div class="div_header">
+            <h3>Productos</h3>
+        </div>';
+    $productos_comprados = $enlace->query('SELECT pr.* FROM producto_obtenido_productos p JOIN producto pr WHERE pr.id=p.productos and producto_obtenido=' . $id_producto_obtenido);
     
-    // foreach($productos_comprados as $producto_comprado){
-    //     $phpmailer->Body .=
-    //     '<div class="producto">
-    //         <img src="'.$producto_comprado['foto'].'" alt='.$producto_comprado['nombre'].'>
-    //         <ul>
-    //             <li>
-    //                 <p class="info"><strong class="title">Nombre: </strong> '.$producto_comprado['nombre'].'</p>
-    //             </li>
-    //             <li>
-    //                 <p class="info"><strong class="title">Valor: </strong> '.$producto_comprado['precio'].' €</p>
-    //             </li>
-    //             <li>
-    //                 <p class="info"><strong class="title">Referencia: </strong> '.$producto_comprado['referencia'].'</p>
-    //             </li>
-    //         </ul>
-    //     </div>';
-    //     $phpmailer->Body .='
-    // </div>
-    // </br>
-    // </body>
-    // </html>
-    // ';}
-    // $phpmailer->IsHTML(true);
-    // $phpmailer->Send();
+    foreach($productos_comprados as $producto_comprado){
+        $body .=
+        '<div class="producto">
+            <img src="'.$producto_comprado['foto'].'" alt='.$producto_comprado['nombre'].'>
+            <ul>
+                <li>
+                    <p class="info"><strong class="title">Nombre: </strong> '.$producto_comprado['nombre'].'</p>
+                </li>
+                <li>
+                    <p class="info"><strong class="title">Valor: </strong> '.$producto_comprado['precio'].' €</p>
+                </li>
+                <li>
+                    <p class="info"><strong class="title">Referencia: </strong> '.$producto_comprado['referencia'].'</p>
+                </li>
+            </ul>
+        </div>';}
+        $body .='
+    </div>
+    </br>
+    </body>
+    </html>';
+
+    $mj = new \Mailjet\Client('f36d74fe239227e1c1805fd3f4672a00','694b477e742edfd912152bb427d0cebc',true,['version' => 'v3.1']);
+$body = [
+    'Messages' => [
+    [
+        'From' => [
+        'Email' => "pureemotionbox@gmail.com",
+        'Name' => "Pure eMotion Box"
+        ],
+        'To' => [
+        [
+            'Email' => $_REQUEST['email'],
+            'Name' => $_REQUEST['email']
+        ]
+        ],
+        'Subject' => "Confirmación de compra en Pure eMotion Box",
+        'TextPart' => "Confirmación de compra en Pure eMotion Box",
+        'HTMLPart' => $body,
+        'CustomID' => "AppGettingStartedTest"
+    ]
+    ]
+];
+$response = $mj->post(Resources::$Email, ['body' => $body]);
+$response->success() && var_dump($response->getData());
     
-    header("Location: ../content/customer/box/display-buy.php?id=" . $id_producto_obtenido);
+header("Location: ../content/customer/box/display-buy.php?id=" . $id_producto_obtenido);
  
 }
 mysqli_close($enlace);
