@@ -14,19 +14,22 @@ require "enlace.php";
 if (!$enlace) {
     echo "Error: No se pudo conectar a MySQL." . "<br/>";
 } else {
+    if (empty($_REQUEST['paymentID']) || empty($_REQUEST['payerID']) || empty($_REQUEST['token'])){
+        header('Location: ../index.php');
+    }
     
     $user = wp_get_current_user();
     $id = $user->ID;
     if($id!=0){
         $query = "INSERT INTO compra (direccion_envio, fecha, identificador,wp_users) VALUES(?, CURRENT_TIMESTAMP, ?,?);";
         $query_preparada = $enlace->prepare($query);
-        $identificador = rand(1,30000);
-        $query_preparada->bind_param('sii', $_REQUEST['direccion_envio'], $identificador,$id);
+        $identificador = $_REQUEST['paymentID'];
+        $query_preparada->bind_param('ssi', $_REQUEST['direccion_envio'], $identificador,$id);
     }else{
         $query = "INSERT INTO compra (direccion_envio, fecha, identificador) VALUES(?, CURRENT_TIMESTAMP, ?);";
         $query_preparada = $enlace->prepare($query);
-        $identificador = rand(1,30000);
-        $query_preparada->bind_param('si', $_REQUEST['direccion_envio'], $identificador);
+        $identificador = $_REQUEST['paymentID'];
+        $query_preparada->bind_param('ss', $_REQUEST['direccion_envio'], $identificador);
     }
     $query_preparada->execute();
  
