@@ -9,10 +9,14 @@
     <?php 
 
     echo phpversion() . "<br/>";
-
+    
     $enlace = mysqli_connect("localhost", "pureemotionbox", "pureemotionboxPGPI21", "pureemotionbox");
+    echo mysqli_connect_error($enlace);
+    
+    
+    echo "Hola mundo";
     $enlace->set_charset("utf8");
-
+    echo "Hola mundo 2";
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . "<br/>";
     } else {
