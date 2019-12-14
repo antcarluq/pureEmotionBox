@@ -1,9 +1,7 @@
 <?php
- include "../../../wp-load.php";
- include "../../../wp-content/themes/zurbox-lite/header.php";
- require "../../../security-functions.php";
- require "../../../tools/enlace.php";
- include "../wp-load.php";
+include "../wp-load.php";
+require "enlace.php";
+include "../wp-load.php";
 use \Mailjet\Resources;
 require '../vendor/autoload.php';
 require '../Mailjet/Client.php';
@@ -28,7 +26,7 @@ try {
 
        $fecha = date('Y-m-d H:i:s');;
 
-       $query = "INSERT INTO compra (direccion_envio, fecha, identificador, wp_users) VALUES(?, ?);";
+       $query = "INSERT INTO compra (direccion_envio, fecha, identificador, wp_users) VALUES(?, ?, ?, ?);";
        $query_preparada = $enlace->prepare($query);
        $query_preparada->bind_param('sssi', $direccion_envio, $fecha, $identificador, $user);
        $query_preparada->execute();
@@ -36,7 +34,7 @@ try {
        $compra = mysqli_insert_id($enlace);
 
        $id = $_GET['id'];
-       $query = "INSERT INTO compra_suscripciones (compra, suscripcion) VALUES(?, ?);";
+       $query = "INSERT INTO compra_suscripciones (compra, suscripciones) VALUES(?, ?);";
        $query_preparada = $enlace->prepare($query);
        $query_preparada->bind_param('ii', $compra, $id);
        $query_preparada->execute();

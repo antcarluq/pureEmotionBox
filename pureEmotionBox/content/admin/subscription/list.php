@@ -1,13 +1,13 @@
 <?php
+    include "../../../wp-load.php";
+    include "../../../wp-content/themes/zurbox-lite/header.php";
+    require "../../../security-functions.php";
+    require "../../../tools/enlace.php";
 
     if(!assert_is_shop_admin()){
         header('Location: ../../../index.php');
     } 
 
-    include "../../../wp-load.php";
-    include "../../../wp-content/themes/zurbox-lite/header.php";
-    require "../../../security-functions.php";
-    require "../../../tools/enlace.php";
 
     $enlace = start_database();
     

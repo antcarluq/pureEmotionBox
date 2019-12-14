@@ -3,17 +3,17 @@
 </head>
 
 <body>
-
-<?php if(!assert_is_shop_admin()){
+<?php 
+include "../../../wp-load.php";
+include "../../../wp-content/themes/zurbox-lite/header.php";
+require "../../../security-functions.php";
+require "../../../tools/enlace.php";
+if(!assert_is_shop_admin()){
     header('Location: ../../../index.php');
 } 
 ?>
 <form action="<?php if(isset($_GET['subscription'])){echo '../../../tools/save-subscription.php?id='.$_GET['subscription'];} else {echo '../../../tools/save-subscription.php';} ?>" method="POST">
     <?php 
-        include "../../../wp-load.php";
-        include "../../../wp-content/themes/zurbox-lite/header.php";
-        require "../../../security-functions.php";
-        require "../../../tools/enlace.php";
 
         $enlace = start_database();
         
