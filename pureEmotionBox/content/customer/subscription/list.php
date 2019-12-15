@@ -10,7 +10,7 @@
         echo "Error: No se pudo conectar a MySQL." . "<br/>";
     } else {
         if(isset($_GET['caja'])){
-            $lista = $enlace->query('select DISTINCT * from suscripcion s join suscripcion_caja sc where s.activo = 1 and sc.suscripcion=s.id and sc.caja ='.$_GET['caja']);
+            $lista = $enlace->query('select * from suscripcion s where s.activo=1');
             echo "Número de resultados: " . $lista->num_rows . "<br/>";
             foreach ($lista as $susc) {
                 echo '<br>'.$susc['id'];
