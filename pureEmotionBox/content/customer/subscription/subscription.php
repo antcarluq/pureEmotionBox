@@ -1,3 +1,14 @@
+<?php 
+include "../../../wp-load.php";
+include "../../../wp-content/themes/zurbox-lite/header.php";
+require "../../../security-functions.php";
+require "../../../tools/enlace.php";
+require "../../../tools/paypal-config.php";
+
+if (!assert_is_customer()){
+    header('Location: ../../../index.php');
+}
+?>
 <html>
 <head>
 </head>
@@ -5,12 +16,7 @@
 <body>
 
 <form action="<?php if(isset($_GET['suscripcion'])){echo '../../../tools/buy-subscription.php?id='.$_GET['suscripcion'];} ?>" method="POST">
-    <?php 
-        include "../../../wp-load.php";
-        include "../../../wp-content/themes/zurbox-lite/header.php";
-        require "../../../security-functions.php";
-        require "../../../tools/enlace.php";
-
+        <?php
         $enlace = start_database();
 
         if(isset($_GET['suscripcion'])){
@@ -53,8 +59,20 @@
         <?php } ?>
     </select>
     <?php } ?>
+
+    <label>Email</label>
+    <input id="email" name="email" type="email"/>
+
+    <label>Dirección de envío</label>
+    <input id="direccion_envio" name="direccion_envio" type="text"/>
+
     <br>
-    <input type="submit" value="Suscribirse"/>
+    <?php 
+    $precio_paypal = $res['precio'];
+    $action_paypal = "../../../tools/buy-subscription.php";
+    $id_objeto_paypal = $res["id"];
+    include "../../../tools/paypal-checkout.php";
+    ?>
     <?php mysqli_close($enlace);?>
 </form>
 </body>

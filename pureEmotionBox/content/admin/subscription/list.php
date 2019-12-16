@@ -14,11 +14,9 @@
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . "<br/>";
     } else {
-        if(isset($_GET['caja'])){
-            $lista = $enlace->query('select DISTINCT * from suscripcion s join suscripcion_caja sc where sc.suscripcion=s.id and sc.caja ='.$_GET['caja']);
+            $lista = $enlace->query('select * from suscripcion;');
             echo "Número de resultados: " . $lista->num_rows . "<br/>";
             foreach ($lista as $susc) {
-                echo '<br>'.$susc['id'];
                 echo '<br>'.$susc['nombre'];
                 echo '<br>'.$susc['periodicidad'];
                 echo '<br>'.$susc['precio'];
@@ -29,7 +27,7 @@
                 } else {
                     echo '<br>'.'<a href="../../../tools/activate-subscription.php?suscripcion='.$susc['id'].'">Activar</a>';
                 }
-            }
+            
         }
         
         

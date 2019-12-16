@@ -26,7 +26,19 @@ require "../../../tools/enlace.php";
                 <div class="wp-block-button">
                     <a class="wp-block-button__link" href="../../admin/product/list.php">Gestionar productos</a>
                 </div>
-                <?php } ?> 
+
+                <div class="wp-block-button">
+                    <a class="wp-block-button__link" href="../../admin/subscription/list.php">Gestionar suscripciones</a>
+                </div>
+                <?php } else {?> 
+                <div class="wp-block-button">
+                    <a class="wp-block-button__link" href="../../customer/subscription/list.php">Suscripciones</a>
+                </div>
+
+                <div class="wp-block-button">
+                    <a class="wp-block-button__link" href="../../customer/subscription/my-subscriptions.php">Mis suscripciones</a>
+                </div>
+                <?php }?>
 
                 
     

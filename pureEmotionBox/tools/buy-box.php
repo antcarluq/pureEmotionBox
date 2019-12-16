@@ -37,12 +37,12 @@ if (!$enlace) {
  
     $query = "INSERT INTO producto_obtenido (caja, compra) VALUES(?, ?);";
     $query_preparada = $enlace->prepare($query);
-    $query_preparada->bind_param('ii', $_REQUEST['id_caja'], $id_compra);
+    $query_preparada->bind_param('ii', $_REQUEST['id'], $id_compra);
     $query_preparada->execute();
  
     $id_producto_obtenido = mysqli_insert_id($enlace);
  
-    $productos_seleccionados_fijos = $enlace->query('SELECT * FROM producto_seleccionado WHERE fijo=1 AND caja=' . $_REQUEST['id_caja']);
+    $productos_seleccionados_fijos = $enlace->query('SELECT * FROM producto_seleccionado WHERE fijo=1 AND caja=' . $_REQUEST['id']);
     
     foreach ($productos_seleccionados_fijos as $producto_fijo) {
         $query = "INSERT INTO producto_obtenido_productos (producto_obtenido, productos) VALUES(?, ?);";
@@ -51,12 +51,12 @@ if (!$enlace) {
         $query_preparada->execute();
     }
  
-    $result_caja = $enlace->query('SELECT * FROM caja WHERE id=' . $_REQUEST['id_caja']);
+    $result_caja = $enlace->query('SELECT * FROM caja WHERE id=' . $_REQUEST['id']);
     $caja = $result_caja->fetch_assoc();
  
     $numero_productos_restantes = $caja["cantidad_productos"] - mysqli_num_rows($productos_seleccionados_fijos);
  
-    $result_productos_restantes = $enlace->query('SELECT * FROM producto_seleccionado WHERE fijo=0 AND caja=' . $_REQUEST['id_caja']);
+    $result_productos_restantes = $enlace->query('SELECT * FROM producto_seleccionado WHERE fijo=0 AND caja=' . $_REQUEST['id']);
     $productos_aleatorios = $result_productos_restantes->fetch_all();
     
     $i = 0;

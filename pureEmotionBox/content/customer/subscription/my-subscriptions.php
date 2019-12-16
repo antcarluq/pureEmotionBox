@@ -10,14 +10,14 @@
         echo "Error: No se pudo conectar a MySQL." . "<br/>";
     } else {
         $user = wp_get_current_user()-> ID;
-        $lista = $enlace->query('SELECT * FROM compra c join compra_suscripciones cs join suscripcion s where c.wp_users ='.$user.'and s.activo=1 and s.id=cs.suscripciones'); 
-        echo "Número de resultados: " . $lista->num_rows . "<br/>";
+        $lista = $enlace->query('SELECT * FROM compra c join compra_suscripciones cs join suscripcion s where wp_users = '.$user.' and c.id = cs.compra and cs.suscripciones = s.id and s.activo = 1;'); 
         foreach ($lista as $susc) {
-            echo '<br>'.$susc['id'];
             echo '<br>'.$susc['nombre'];
             echo '<br>'.$susc['periodicidad'];
             echo '<br>'.$susc['precio'];
             echo '<br>'.$susc['tematica'];
+            echo '<br>'.$susc['fecha'];
+            echo '<br>';
         }
     }
 

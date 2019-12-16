@@ -1,4 +1,5 @@
 <?php
+include "../security-functions.php";
     if(!assert_is_shop_admin()){
         header('Location: ../../../index.php');
     } 
@@ -13,7 +14,7 @@
             $id = $_GET['suscripcion'];
             $q = $enlace->query("UPDATE suscripcion set activo = b'1' WHERE id=".$id);
             if(!is_null($q)){
-                header('Location: ../../../content/admin/suscription/list.php');
+                header('Location: ../../../content/admin/subscription/list.php');
             }
         }
     }

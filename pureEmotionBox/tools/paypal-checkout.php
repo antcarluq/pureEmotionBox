@@ -22,7 +22,7 @@ paypal.Button.render({
     return actions.payment.create({
       transactions: [{
         amount: {
-          total: '<?php echo $caja["precio"]; ?>',
+          total: '<?php echo $precio_paypal; ?>',
           currency: 'EUR'
         }
       }]
@@ -30,17 +30,16 @@ paypal.Button.render({
   },
   onApprove: function (data, actions) {
     return actions.order.capture().then(function(details) {
-        // window.location.href = "<?php echo get_site_url(); ?>/tools/buy-box.php".concat("?id_caja=", <?php echo $caja["id"];?>,"&email=",document.getElementById("email").value, "&direccion_envio=", document.getElementById("direccion_envio").value );
         
         const form = document.createElement('form');
         form.method = 'post';
-        form.action = '../../../tools/buy-box.php';
+        form.action = '<?php echo $action_paypal;?>';
 
-        const hiddenFieldCaja = document.createElement('input');
-        hiddenFieldCaja.type = 'hidden';
-        hiddenFieldCaja.name = 'id_caja';
-        hiddenFieldCaja.value = <?php echo $caja["id"];?>;
-        form.appendChild(hiddenFieldCaja);
+        const hiddenFieldID = document.createElement('input');
+        hiddenFieldID.type = 'hidden';
+        hiddenFieldID.name = 'id';
+        hiddenFieldID.value = <?php echo $id_objeto_paypal;?>;
+        form.appendChild(hiddenFieldID);
 
         const hiddenFieldEmail = document.createElement('input');
         hiddenFieldEmail.type = 'hidden';

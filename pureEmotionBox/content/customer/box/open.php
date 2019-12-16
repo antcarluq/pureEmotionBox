@@ -5,6 +5,7 @@ include "../../../wp-load.php";
 include "../../../wp-content/themes/zurbox-lite/header.php";
 require "../../../security-functions.php";
 require "../../../tools/enlace.php";
+require "../../../tools/paypal-config.php";
 
 ?>
 
@@ -37,12 +38,19 @@ require "../../../tools/enlace.php";
                                 <input type="hidden" name="id_caja" value="<?php echo $caja["id"] ?>" readonly><br>
                                 
                                 Introduce el correo al que quieres que llegue la factura y los datos de tu compra:<br>
-                                <input type="email" name="email"><br>
+                                <input id="email" type="email" name="email"><br>
 
                                 Introduce la dirección de envío:<br>
-                                <input type="text" name="direccion_envio"><br>
+                                <input id="direccion_envio" type="text" name="direccion_envio"><br>
                                 
-                                <input type="submit" value="Enviar"/>
+                                <!-- <input type="submit" value="Enviar"/> -->
+                                <p>Precio: <?php echo $caja['precio']?> €</p>
+                                <?php 
+                                $precio_paypal = $caja['precio'];
+                                $action_paypal = "../../../tools/buy-box.php";
+                                $id_objeto_paypal = $caja["id"];
+                                include "../../../tools/paypal-checkout.php";
+                                ?>
                             </form>
                         </div>
                         

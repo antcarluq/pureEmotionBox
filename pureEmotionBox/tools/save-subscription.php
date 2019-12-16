@@ -8,21 +8,25 @@ try {
     $enlace->begin_transaction();
     
    if (isset($_GET['id']) && is_numeric($_GET['id'])){
-       $id = $_GET['id'];
-       $query = "UPDATE suscripcion SET nombre=?, periodicidad=?, precio=?, tematica=?,activo=? WHERE id=" . $id .";";
-       $query_preparada = $enlace->prepare($query);
-       $query_preparada->bind_param('ssdsi', $_POST['nombre'], $_POST['periodicidad'], $_POST['precio'], $_POST['tematica'], $_POST['activo']);
-       $query_preparada->execute();
-       
-       $enlace->query("DELETE FROM suscripcion_caja where suscripcion=".$id);
-       
-       $caja_seleccionada = $_POST['cajas'];
-       foreach($caja_seleccionada as $caja){
-            $query = "INSERT INTO suscripcion_caja (suscripcion, caja) VALUES(?, ?);";
-            $query_preparada = $enlace->prepare($query);
-            $query_preparada->bind_param('ii', $id, $caja);
-            $query_preparada->execute();
-       }
+        $id = $_GET['id'];
+        $activo = $_POST['activo'];
+        $query = "UPDATE suscripcion SET nombre=?, periodicidad=?, precio=?, tematica=?,activo=? WHERE id=" . $id .";";
+        $query_preparada = $enlace->prepare($query);
+        if ($activo == null){
+            $activo = 0;
+        }
+        $query_preparada->bind_param('ssdsi', $_POST['nombre'], $_POST['periodicidad'], $_POST['precio'], $_POST['tematica'], $activo);
+        $query_preparada->execute();
+        
+        $enlace->query("DELETE FROM suscripcion_caja where suscripcion=".$id);
+        
+        $caja_seleccionada = $_POST['cajas'];
+        foreach($caja_seleccionada as $caja){
+                $query = "INSERT INTO suscripcion_caja (suscripcion, caja) VALUES(?, ?);";
+                $query_preparada = $enlace->prepare($query);
+                $query_preparada->bind_param('ii', $id, $caja);
+                $query_preparada->execute();
+        }
   
    } else {
        
@@ -44,7 +48,7 @@ try {
 
    $enlace->commit();
    
-   header('Location: ../../../index.php');
+   header('Location: ../content/admin/subscription/list.php');
 
 } catch (Exception $e) {
    $enlace->rollback();
